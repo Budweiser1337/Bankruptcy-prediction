@@ -2,7 +2,7 @@
 
 - # Overview
 
-Welcome to the Taiwanese Companies Bankruptcy Prediction project! 
+Welcome to the Taiwanese Companies Bankruptcy Prediction project ! 
 
 This project aims to develop a predictive model to identify the likelihood of bankruptcy for Taiwanese companies. 
 
