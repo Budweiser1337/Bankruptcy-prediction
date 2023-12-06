@@ -13,8 +13,8 @@ As bankruptcy due to business failure can negatively affect the enterprise as we
 
 
 - # Data Description
-There are total 6819 samples in dataset and 96 features (including class label). 
-Out of 6819, 6599 are negative (not bankrupt) and only 220 are positive (bankrupt).
+There is a total of 6819 samples in the dataset with 96 features (including the class label). 
+Out of the 6819 samples, 6599 are negative (not bankrupt) and only 220 are positive (bankrupt).
 Here is a list of all the features:
 
 Bankrupt?: Class label (target feature)
