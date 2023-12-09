@@ -15,7 +15,38 @@ As bankruptcy due to business failure can negatively affect the enterprise as we
 - # Data Description
 There is a total of 6819 samples in the dataset with 96 features (including the class label). 
 Out of the 6819 samples, 6599 are negative (not bankrupt) and only 220 are positive (bankrupt).
-Here is a list of all the features:
+You will find at the end of the README the list of all features in the dataset.
+
+- # Exploratory Data Analysis
+  Visualizations of class distributions, histograms and scatterpoints of relevant features to provide good insights into the data.
+  Visualizations of feature importance for different models.
+
+- # Data Preprocessing
+1. Data cleaning
+   We checked for missing and duplicated values, there was none. However we did identify and address zero values in certain columns by imputing the mean.
+2. Feature engineering and feature selection
+   Removal of highly correlated features to improve model interpretability and reduce multicollinearity.
+   Experimented with both Recursive Feature Elimination (RFE) and Principal Component Analysis (PCA) for feature selection.
+4. Solving the class imbalance problem
+   Applied oversampling techniques (SMOTE and RandomOverSampler).
+
+- # Model Training and Evaluations
+  1. Model selection
+     Experimented with GradientBoosting, RandomForest, and MLPClassifier.
+  3. Grid Search and cross-validation
+     Used Grid Search to find optimal hyperparameters.
+     Used cross-validation to ensure that the model performance metrics are robust and not heavily dependent on a specific train-test split.
+  5. Evaluation metrics and visualization
+     We used a variety of metrics including f1_score, precision, recall, PR AUC, ROC AUC for evaluation as the accuracy isn't very representative of the model's performance for this kind of problem.
+     Visualized how the models performed on the test dataset on a confusion matrix.
+
+- # Conclusion
+
+The best model overall was the MLP Classifier with 0.77 ROC and 0.62 recall after performing Recursive Feature Elimination and oversampling the data using SMOTE, however, it wasn't the best accross all metrics as the precision (0.22) and f1 score (0.32) were lower compared to the other models.
+Computational costs were heavily reduced whether it was by reducing the number of features with PCA or RFE. 
+The GridSearchCV was faster by 50% on average for all 3 models we experimented with.
+
+- # List of features
 
 Bankrupt?: Class label (target feature)
 
