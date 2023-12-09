@@ -47,8 +47,16 @@
 - # Conclusion
 
   The best model overall was the MLP Classifier with 0.77 ROC and 0.62 recall after performing Recursive Feature Elimination and oversampling the data using SMOTE, however, it wasn't the best accross all metrics   as the precision (0.22) and f1 score (0.32) were lower compared to the other models.
-  Computational costs were heavily reduced whether it was by reducing the number of features with PCA or RFE. 
+  
+  Computational costs were heavily reduced whether it was by reducing the number of features with PCA or RFE.
+  
   The GridSearchCV was faster by 50% on average for all 3 models we experimented with.
+
+  We observed that companies which had high "Interest-bearing debt interest rate", "Total debt/Total net worth", "Equity to Liability" and "Debt Ratio %" tended to end up bankrupt more often as these features  were selected by RFE regardless of the model.
+
+- # Future Work
+
+  For future research on this subject it might be interesting to explore other imputation methods like median or machine learning-based imputation techniques and consider trying different ratios of oversampling and evaluating their impact on model performance. Here we limited our project to 3 models but training other models such as Support Vector Machines (SVM) or K-Nearest Neighbors (KNN) might show good performance.
 
 - # List of features
 
