@@ -2,20 +2,20 @@
 
 - # Overview
 
-Welcome to the Taiwanese Companies Bankruptcy Prediction project ! 
+  Welcome to the Taiwanese Companies Bankruptcy Prediction project ! 
 
-This project aims to develop a predictive model to identify the likelihood of bankruptcy for Taiwanese companies. 
+  This project aims to develop a predictive model to identify the likelihood of bankruptcy for Taiwanese companies. 
 
-In a work setting and by leveraging machine learning techniques and financial data, the goal would be to assist stakeholders, such as investors, creditors, and regulatory bodies in making informed decisions.
+  In a work setting and by leveraging machine learning techniques and financial data, the goal would be to assist stakeholders, such as investors, creditors, and regulatory bodies in making informed decisions.
 
 - # Problem Explanation
-As bankruptcy due to business failure can negatively affect the enterprise as well as the global economy, it is crucial to understand and predict whether a company is showing symptoms of going bankrupt or not. The idea is to analyse the distresses in the corporate by taking into considerations different KPI’s of the company. These distresses often lead to bankruptcy of the company if not alerted at the right time. The problem statement is to develop a prediction model which will predict whether a company can go bankrupt or not. This will help the company take appropriate decisions.
+  As bankruptcy due to business failure can negatively affect the enterprise as well as the global economy, it is crucial to understand and predict whether a company is showing symptoms of going bankrupt or not.   The idea is to analyse the distresses in the corporate by taking into considerations different KPI’s of the company. These distresses often lead to bankruptcy of the company if not alerted at the right time.     The problem statement is to develop a prediction model which will predict whether a company can go bankrupt or not. This will help the company take appropriate decisions.
 
 
 - # Data Description
-There is a total of 6819 samples in the dataset with 96 features (including the class label). 
-Out of the 6819 samples, 6599 are negative (not bankrupt) and only 220 are positive (bankrupt).
-You will find at the end of the README the list of all features in the dataset.
+  There is a total of 6819 samples in the dataset with 96 features (including the class label). 
+  Out of the 6819 samples, 6599 are negative (not bankrupt) and only 220 are positive (bankrupt).
+  You will find at the end of the README the list of all features in the dataset.
 
 - # Exploratory Data Analysis
   Visualizations of class distributions, histograms and scatterpoints of relevant features to provide good insights into the data.
@@ -24,27 +24,31 @@ You will find at the end of the README the list of all features in the dataset.
 - # Data Preprocessing
 1. Data cleaning
    We checked for missing and duplicated values, there was none. However we did identify and address zero values in certain columns by imputing the mean.
-2. Feature engineering and feature selection
+   
+3. Feature engineering and feature selection
    Removal of highly correlated features to improve model interpretability and reduce multicollinearity.
    Experimented with both Recursive Feature Elimination (RFE) and Principal Component Analysis (PCA) for feature selection.
+   
 4. Solving the class imbalance problem
    Applied oversampling techniques (SMOTE and RandomOverSampler).
 
 - # Model Training and Evaluations
-  1. Model selection
-     Experimented with GradientBoosting, RandomForest, and MLPClassifier.
-  3. Grid Search and cross-validation
-     Used Grid Search to find optimal hyperparameters.
-     Used cross-validation to ensure that the model performance metrics are robust and not heavily dependent on a specific train-test split.
-  5. Evaluation metrics and visualization
-     We used a variety of metrics including f1_score, precision, recall, PR AUC, ROC AUC for evaluation as the accuracy isn't very representative of the model's performance for this kind of problem.
-     Visualized how the models performed on the test dataset on a confusion matrix.
+1. Model selection
+   Experimented with GradientBoosting, RandomForest, and MLPClassifier.
+   
+3. Grid Search and cross-validation
+   Used Grid Search to find optimal hyperparameters.
+   Used cross-validation to ensure that the model performance metrics are robust and not heavily dependent on a specific train-test split.
+   
+5. Evaluation metrics and visualization
+   We used a variety of metrics including f1_score, precision, recall, PR AUC, ROC AUC for evaluation as the accuracy isn't very representative of the model's performance for this kind of problem.
+   Visualized how the models performed on the test dataset on a confusion matrix.
 
 - # Conclusion
 
-The best model overall was the MLP Classifier with 0.77 ROC and 0.62 recall after performing Recursive Feature Elimination and oversampling the data using SMOTE, however, it wasn't the best accross all metrics as the precision (0.22) and f1 score (0.32) were lower compared to the other models.
-Computational costs were heavily reduced whether it was by reducing the number of features with PCA or RFE. 
-The GridSearchCV was faster by 50% on average for all 3 models we experimented with.
+  The best model overall was the MLP Classifier with 0.77 ROC and 0.62 recall after performing Recursive Feature Elimination and oversampling the data using SMOTE, however, it wasn't the best accross all metrics   as the precision (0.22) and f1 score (0.32) were lower compared to the other models.
+  Computational costs were heavily reduced whether it was by reducing the number of features with PCA or RFE. 
+  The GridSearchCV was faster by 50% on average for all 3 models we experimented with.
 
 - # List of features
 
