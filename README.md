@@ -52,7 +52,7 @@
   
   The GridSearchCV was faster by 50% on average for all 3 models we experimented with.
 
-  We observed that companies which had high "Interest-bearing debt interest rate", "Total debt/Total net worth", "Equity to Liability" and "Debt Ratio %" tended to end up bankrupt more often as these features  were selected by RFE regardless of the model.
+  We observed that companies which had high "Interest-bearing debt interest rate", "Persistent EPS in the Last Four Seasons", "Total debt/Total net worth", "Equity to Liability" and "Debt Ratio %" tended to end up bankrupt more often as these features  were selected by RFE regardless of the model.
 
 - # Future Work
 
